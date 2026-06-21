@@ -1,6 +1,4 @@
 """
-taichi_mpm_3d.py
-
 3D MLS-MPM (Moving Least Squares Material Point Method) solver, simulating
 three elastic "jello" cubes entering a shared scene in sequence and
 colliding under gravity.
@@ -192,7 +190,7 @@ def dump_frame(frame, series_prefix):
     dirname = os.path.dirname(series_prefix)
     if dirname and not os.path.exists(dirname):
         os.makedirs(dirname)
-    writer = ti.PLYWriter(num_vertices=N_PARTICLES)
+    writer = ti.tools.PLYWriter(num_vertices=N_PARTICLES)
     writer.add_vertex_pos(np_pos[:, 0], np_pos[:, 1], np_pos[:, 2])
     writer.export_frame_ascii(frame, series_prefix)
 
