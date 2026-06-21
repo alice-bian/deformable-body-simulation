@@ -1,0 +1,26 @@
+# Build artifacts
+build/
+out/
+bin/
+*.o
+*.obj
+
+# Simulation output (regenerate locally; keep the repo light)
+output/
+render_output/
+data/cloth.obj
+
+# Large render assets - link out instead of committing
+*.mov
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS/editor cruft
+.DS_Store
+*.swp
+.vscode/
+.idea/
